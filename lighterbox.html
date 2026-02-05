@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LighterBox Demo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 3rem 1.5rem 1.5rem;
+            text-align: center;
+        }
+        header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.25rem; }
+        header p { color: #64748b; }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+
+        section { margin-bottom: 3rem; }
+        section h2 { font-size: 1.25rem; margin-bottom: 0.25rem; }
+        section p.desc {
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .grid img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: block;
+        }
+        .grid img:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .btn {
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: background 0.2s;
+        }
+        .btn:hover { background: #1d4ed8; }
+
+        code {
+            background: #e2e8f0;
+            padding: 0.15rem 0.4rem;
+            border-radius: 0.25rem;
+            font-size: 0.8rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #94a3b8;
+            font-size: 0.8rem;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>LighterBox</h1>
+    <p>Lightweight lightbox with zoom, hi-res loading &amp; smooth transitions</p>
+</header>
+
+<div class="container">
+
+    <!-- Single image, no gallery -->
+    <section>
+        <h2>Single Image</h2>
+        <p class="desc">One image on its own. No gallery, no navigation. Click to view full size, scroll-wheel or double-click to zoom.</p>
+        <div class="grid">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400"
+                 data-lighterbox="solo"
+                 alt="Mountain Vista">
+            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=400"
+                 data-lighterbox="solo-hires"
+                 data-lighterbox-src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=1600"
+                 alt="Coastal Sunset">
+        </div>
+    </section>
+
+    <!-- Grouped galleries with hi-res -->
+    <section>
+        <h2>Grouped Galleries with Hi-Res</h2>
+        <p class="desc">Thumbnails on the page, full resolution in the lightbox via <code>data-lighterbox-src</code>. Zoom in to see the difference.</p>
+
+        <h3 style="font-size:1rem; margin-bottom:0.5rem;">Portraits</h3>
+        <div class="grid" style="margin-bottom:1.5rem;">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300"
+                 data-lighterbox="portraits"
+                 data-lighterbox-src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1600"
+                 alt="Golden Hour Portrait">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300"
+                 data-lighterbox="portraits"
+                 data-lighterbox-src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1600"
+                 alt="Professional Headshot">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300"
+                 data-lighterbox="portraits"
+                 data-lighterbox-src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1600"
+                 alt="Natural Light Portrait">
+        </div>
+
+        <h3 style="font-size:1rem; margin-bottom:0.5rem;">Landscapes</h3>
+        <div class="grid">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300"
+                 data-lighterbox="landscapes"
+                 data-lighterbox-src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600"
+                 alt="Mountain Vista">
+            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=300"
+                 data-lighterbox="landscapes"
+                 data-lighterbox-src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=1600"
+                 alt="Coastal Sunset">
+            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=300"
+                 data-lighterbox="landscapes"
+                 data-lighterbox-src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1600"
+                 alt="Forest Path">
+        </div>
+    </section>
+
+    <!-- Custom captions -->
+    <section>
+        <h2>Custom Captions</h2>
+        <p class="desc">Explicit caption text via <code>data-lighterbox-caption</code>.</p>
+        <div class="grid">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+                 data-lighterbox="captions"
+                 data-lighterbox-src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1600"
+                 data-lighterbox-caption="Urban portrait with creative composition">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400"
+                 data-lighterbox="captions"
+                 data-lighterbox-src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=1600"
+                 data-lighterbox-caption="Editorial fashion photography">
+        </div>
+    </section>
+
+    <!-- Programmatic API -->
+    <section>
+        <h2>Programmatic API</h2>
+        <p class="desc">Images added via JavaScript. Open with <code>lb.open('group', index)</code>.</p>
+        <button class="btn" id="openApiGallery">Open API Gallery</button>
+    </section>
+
+</div>
+
+<footer>
+    LighterBox &mdash; zero-config lightbox with zoom &amp; hi-res loading
+</footer>
+
+<script src="lighterbox.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const lb = document.querySelector('lighter-box');
+
+        // Programmatic images
+        lb.addImage({
+            src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1600',
+            thumbnail: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300',
+            caption: 'API: Golden Hour',
+            group: 'api-demo'
+        });
+        lb.addImage({
+            src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600',
+            thumbnail: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300',
+            caption: 'API: Mountain Vista',
+            group: 'api-demo'
+        });
+        lb.addImage({
+            src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=1600',
+            thumbnail: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300',
+            caption: 'API: Fashion Portrait',
+            group: 'api-demo'
+        });
+
+        document.getElementById('openApiGallery').addEventListener('click', () => {
+            lb.open('api-demo', 0);
+        });
+
+    });
+</script>
+</body>
+</html>

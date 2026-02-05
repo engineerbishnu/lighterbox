@@ -1,0 +1,46 @@
+{
+  "name": "lighterbox",
+  "version": "1.0.0",
+  "description": "Zero-config vanilla JS web component lightbox with zoom and panning, hi-res loading, and touch gestures. Lightweight, accessible, and no dependencies.",
+  "keywords": [
+    "lightbox",
+    "image-viewer",
+    "gallery",
+    "zoom",
+    "touch",
+    "responsive",
+    "no-dependencies"
+  ],
+  "homepage": "https://github.com/dkovach/lighterbox#readme",
+  "bugs": {
+    "url": "https://github.com/dkovach/lighterbox/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkovach/lighterbox.git"
+  },
+  "license": "MIT",
+  "author": "David Kovach",
+  "type": "commonjs",
+  "main": "lighterbox.js",
+  "module": "lighterbox.js",
+  "exports": {
+    ".": {
+      "import": "./lighterbox.js",
+      "require": "./lighterbox.js",
+      "default": "./lighterbox.js"
+    },
+    "./min": {
+      "import": "./lighterbox.min.js",
+      "require": "./lighterbox.min.js",
+      "default": "./lighterbox.min.js"
+    }
+  },
+  "scripts": {
+    "build": "terser lighterbox.js -o lighterbox.min.js --compress --mangle",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "terser": "^5.46.0"
+  }
+}

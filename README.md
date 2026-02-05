@@ -1,6 +1,10 @@
 # LighterBox
 
-Zero-config lightbox with zoom, hi-res loading, and touch gestures. No dependencies.
+LighterBox is a native web component based vanilla JavaScript lightbox for modern times. It requires zero-configuration, yet offers tons of optional features, and provides the now common requirements of image zoom and panning, thumbnail and hi-resolution image loading, and responsive touch gestures. ALl with no dependencies and no build steps or process required. 
+
+It is built as a native Web Component using Custom Elements v1 and Shadow DO, and a fundamentally different architecture from traditional lightbox libraries that inject global CSS, pollute the DOM with wrapper divs, and risk style collisions with your existing codebase. As a self-contained <lighter-box> element, all markup, styles, and behavior are fully encapsulated inside the shadow root, meaning it works reliably regardless of what CSS framework, reset, or design system your site uses. 
+
+There are no class name conflicts. It registers itself as a standard HTML element, so it can be dropped into any stack — vanilla HTML, React, Vue, Svelte, server-rendered templates — with a single script tag and zero configuration. The browser handles the component lifecycle natively through connectedCallback and disconnectedCallback, providing automatic setup and teardown without framework-specific mount/unmount hooks. This is the direction the open web platform itself is moving towards: encapsulated, interoperable components that work everywhere without a build step or runtime dependency.
 
 [Demo](https://dkovach.github.io/lighterbox/lighterbox.html)
 

